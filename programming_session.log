@@ -822,4 +822,154 @@ Ok, one module loaded.
 2022-09-19 12:14:30.686134697
 [?1h=>>> :qE[?1l>Leaving GHCi.
 [?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ git add .
+[?2004lwarning: adding embedded git repository: cs2022
+[33mhint: You've added another git repository inside your current repository.[m
+[33mhint: Clones of the outer repository will not contain the contents of[m
+[33mhint: the embedded repository and will not know how to obtain it.[m
+[33mhint: If you meant to add a submodule, use:[m
+[33mhint: [m
+[33mhint: 	git submodule add <url> cs2022[m
+[33mhint: [m
+[33mhint: If you added this path by mistake, you can remove it from the[m
+[33mhint: index with:[m
+[33mhint: [m
+[33mhint: 	git rm --cached cs2022[m
+[33mhint: [m
+[33mhint: See "git help submodule" for more information.[m
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ git commit -m "start algo"
+[?2004l[main ec088d6] start algo
+ 5 files changed, 848 insertions(+), 1 deletion(-)
+ create mode 160000 cs2022
+ create mode 100644 ghci.log
+ create mode 100644 src/TemplateAlgo.hs
+ create mode 100644 stack.yaml.lock
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ git push
+[?2004lEnumerating objects: 10, done.
+Counting objects:  10% (1/10)Counting objects:  20% (2/10)Counting objects:  30% (3/10)Counting objects:  40% (4/10)Counting objects:  50% (5/10)Counting objects:  60% (6/10)Counting objects:  70% (7/10)Counting objects:  80% (8/10)Counting objects:  90% (9/10)Counting objects: 100% (10/10)Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects:  14% (1/7)Compressing objects:  28% (2/7)Compressing objects:  42% (3/7)Compressing objects:  57% (4/7)Compressing objects:  71% (5/7)Compressing objects:  85% (6/7)Compressing objects: 100% (7/7)Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)Writing objects:  28% (2/7)Writing objects:  42% (3/7)Writing objects:  57% (4/7)Writing objects:  71% (5/7)Writing objects:  85% (6/7)Writing objects: 100% (7/7)Writing objects: 100% (7/7), 15.46 KiB | 1.55 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To github.com:mmkyh/cs2022
+   8c0117f..ec088d6  main -> main
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ [?2004l
+exit
+Script started on 2022-09-26 11:30:59+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="132" LINES="16"]
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ cat @[K`which lghci`
+[?2004l#!/bin/bash
+ginput | tee -a -i ghci.log | stack exec -- ghci 2>&1 | tee -a -i ghci.log
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ code ~/.local/bin
+[?2004l[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ lghci[K[K[K[K[Klghci src/TemplateAlgo.hs 
+[?2004lGHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/momoka/cs2022/.ghci
+[1 of 1] Compiling TemplateAlgo     ( src/TemplateAlgo.hs, interpreted )
+Ok, one module loaded.
+2022-09-26 11:41:05.366473535
+[?1h=>>> words "th[K[KThis isa[K a pen"E[?1l>["This","is","a","pen"]
+2022-09-26 11:43:07.634437643
+[?1h=>>> :rE[?1l>   1  module TemplateAlgo where
+   2  
+   3  main :: IO()    
+   4  main = interact func
+   5  
+   6  func :: String -> String
+   7  func input = case map (map readInt . words) (lines input) of 
+   8      _ -> undefined
+   9  
+  10  readInt :: String -> Int
+  11  readInt = read
+Ok, one module loaded.
+2022-09-26 12:06:44.306038473
+[?1h=>>> :l app/Maibb[K[Kn.hsE[?1l>   1    module Main where
+   2    
+   3    main :: IO ()
+   4    main = interact func
+   5    
+   6    func :: String -> String
+   7    func input = unlines (map show [1 .. 3])
+   8    
+   9    
+  10    showInt :: Int -> String
+  11    showInt = show
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-09-26 12:07:21.696049814
+[?1h=>>> mainE[?1l>1
+2
+3
+2022-09-26 12:10:12.272905948
+[?1h=>>> E[?1l><stdin>: hGetChar: illegal operation (handle is semi-closed)
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ [?2004l
+exit
+Script started on 2022-10-03 11:03:01+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="126" LINES="16"]
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ cat `which lghci`
+[?2004l#!/bin/bash
+
+stack exec -- ghci $1
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ lghci app/Main.hs
+[?2004lGHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/momoka/cs2022/.ghci
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 11:07:47.900160539
+[?1h=>>> 27182 `mod` 818E[?1l>188
+2022-10-03 11:13:37.801201198
+[?1h=>>> :rE[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt = read
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  -- func :: String -> String
+  13  -- func input = unlines (map showInt [1 .. 3])
+  14  
+  15  func :: String -> String
+  16  func input = 27182 `mod` 818
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:16:14: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Num String) arising from the literal ‘27182’
+    • In the first argument of ‘mod’, namely ‘27182’
+      In the expression: 27182 `mod` 818
+      In an equation for ‘func’: func input = 27182 `mod` 818[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m16 |[0m[0m func input = [;1m[31m27182[0m[0m `mod` 818
+[;1m[34m   |[0m[0m[;1m[31m              ^^^^^[0m[0m
+[0m[0m[0m
+[;1mapp/Main.hs:16:14: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Integral String) arising from a use of ‘mod’
+    • In the expression: 27182 `mod` 818
+      In an equation for ‘func’: func input = 27182 `mod` 818[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m16 |[0m[0m func input = [;1m[31m27182 `mod` 818[0m[0m
+[;1m[34m   |[0m[0m[;1m[31m              ^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-10-03 11:14:58.922687285
+[?1h=>>> :rE[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt = read
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  -- func :: String -> String
+  13  -- func input = unlines (map showInt [1 .. 3])
+  14  
+  15  func :: String -> String
+  16  func input = showInt (27182 `mod` 818)
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 11:18:32.075564022
+[?1h=>>> :qE[?1l>Leaving GHCi.
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ git add /[K.
 [?2004l
