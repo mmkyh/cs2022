@@ -972,4 +972,82 @@ Ok, one module loaded.
 2022-10-03 11:18:32.075564022
 [?1h=>>> :qE[?1l>Leaving GHCi.
 [?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ git add /[K.
+[?2004l[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ git commit -m "add upto stdin-1-3"
+[?2004l[main e3e848b] add upto stdin-1-3
+ 3 files changed, 183 insertions(+), 5 deletions(-)
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ git push
+[?2004lEnumerating objects: 13, done.
+Counting objects:   7% (1/13)Counting objects:  15% (2/13)Counting objects:  23% (3/13)Counting objects:  30% (4/13)Counting objects:  38% (5/13)Counting objects:  46% (6/13)Counting objects:  53% (7/13)Counting objects:  61% (8/13)Counting objects:  69% (9/13)Counting objects:  76% (10/13)Counting objects:  84% (11/13)Counting objects:  92% (12/13)Counting objects: 100% (13/13)Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects:  16% (1/6)Compressing objects:  33% (2/6)Compressing objects:  50% (3/6)Compressing objects:  66% (4/6)Compressing objects:  83% (5/6)Compressing objects: 100% (6/6)Compressing objects: 100% (6/6), done.
+Writing objects:  14% (1/7)Writing objects:  28% (2/7)Writing objects:  42% (3/7)Writing objects:  57% (4/7)Writing objects:  71% (5/7)Writing objects:  85% (6/7)Writing objects: 100% (7/7)Writing objects: 100% (7/7), 2.75 KiB | 562.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+To github.com:mmkyh/cs2022
+   ec088d6..e3e848b  main -> main
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ [K]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ [?2004l
+exit
+Script started on 2022-10-17 10:54:38+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="132" LINES="16"]
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ stack build
+[?2004l[0mcs2022-0.1.0.0: unregistering (local file changes: app/Main.hs src/TemplateAlgo.hs)[0m
+[0mcs2022> build (lib + exe)[0m
+[0mPreprocessing library for cs2022-0.1.0.0..[0m
+[0mBuilding library for cs2022-0.1.0.0..[0m
+[0m[3 of 3] Compiling TemplateAlgo[0m
+[0mPreprocessing executable 'cs2022' for cs2022-0.1.0.0..[0m
+[0mBuilding executable 'cs2022' for cs2022-0.1.0.0..[0m
+[0m[2 of 2] Compiling Main[0m
+[0mLinking .stack-work/dist/x86_64-linux-tinfo6/Cabal-3.2.1.0/build/cs2022/cs2022 ...[0m
+[0mcs2022> copy/register[0m
+[0mInstalling library in /home/momoka/cs2022/.stack-work/install/x86_64-linux-tinfo6/273c7870d84684c7834fdd6a65b674b80c0318ca475182f61d4492111a027fa8/8.10.7/lib/x86_64-linux-ghc-8.10.7/cs2022-0.1.0.0-BUCyn38qLb36zUXpKHew9j[0m
+[0mInstalling executable cs2022 in /home/momoka/cs2022/.stack-work/install/x86_64-linux-tinfo6/273c7870d84684c7834fdd6a65b674b80c0318ca475182f61d4492111a027fa8/8.10.7/bin[0m
+[0mRegistering library for cs2022-0.1.0.0..[0m
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ stack nuild
+[?2004lInvalid argument `nuild'
+Auxiliary command not found in path `stack-nuild'
+File does not exist or is not a regular file `nuild'
+
+Did you mean this?
+    build
+
+Usage: stack [--help] [--version] [--numeric-version] [--hpack-numeric-version] 
+             [--docker*] [--nix*] 
+             [--verbosity VERBOSITY | (-v|--verbose) | --silent] 
+             [--[no-]time-in-log] [--stack-root STACK-ROOT] 
+             [--work-dir WORK-DIR] [--[no-]system-ghc] [--[no-]install-ghc] 
+             [--arch ARCH] [--ghc-variant VARIANT] [--ghc-build BUILD] 
+             [-j|--jobs JOBS] [--extra-include-dirs DIR] [--extra-lib-dirs DIR] 
+             [--custom-preprocessor-extensions EXT] [--with-gcc PATH-TO-GCC] 
+             [--with-hpack HPACK] [--[no-]skip-ghc-check] [--[no-]skip-msys] 
+             [--local-bin-path DIR] [--setup-info-yaml URL] 
+             [--[no-]modify-code-page] [--[no-]allow-different-user] 
+             [--[no-]dump-logs] [--color|--colour WHEN] 
+             [--snapshot-location-base URL] [--resolver RESOLVER] 
+             [--compiler COMPILER] [--[no-]terminal] 
+             [--stack-colors|--stack-colours STYLES] [--terminal-width INT] 
+             [--stack-yaml STACK-YAML] [--lock-file ARG] COMMAND|FILE
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ stack build
+[?2004l[0mcs2022-0.1.0.0: unregistering (local file changes: app/Main.hs)[0m
+[0mcs2022> build (lib + exe)[0m
+[0mPreprocessing library for cs2022-0.1.0.0..[0m
+[0mBuilding library for cs2022-0.1.0.0..[0m
+[0mPreprocessing executable 'cs2022' for cs2022-0.1.0.0..[0m
+[0mBuilding executable 'cs2022' for cs2022-0.1.0.0..[0m
+[0m[2 of 2] Compiling Main[0m
+[0m[0m
+[0m/home/momoka/cs2022/[;1mapp/Main.hs:39:12: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m[0m
+[0m    Unexpected case expression in function application:[0m
+[0m        case map (map readInt . words) (lines input) of {[0m
+[0m          [[x]] -> unlines [showInt (24 - x)] }[0m
+[0m    You could write it with parentheses[0m
+[0m    Or perhaps you meant to enable BlockArguments?[0m[0m[0m
+[0m[;1m[34m   |[0m[0m[0m
+[0m[;1m[34m39 |[0m[0m func input [;1m[31mcase map (map readInt . words) (lines input) of[0m[0m[0m
+[0m[;1m[34m   |[0m[0m[;1m[31m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m[0m
+[0m[0m[0m[0m[0m
+[0m
+--  While building package cs2022-0.1.0.0 (scroll up to its section to see the error) using:
+      /home/momoka/.stack/setup-exe-cache/x86_64-linux-tinfo6/Cabal-simple_mPHDZzAJ_3.2.1.0_ghc-8.10.7 --builddir=.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.2.1.0 build lib:cs2022 exe:cs2022 --ghc-options " -fdiagnostics-color=always"
+    Process exited with code: ExitFailure 1[0m
+[?2004h]0;momoka@DESKTOP-60F45AM: ~/cs2022[01;32mmomoka@DESKTOP-60F45AM[00m:[01;34m~/cs2022[00m$ git add .
 [?2004l
